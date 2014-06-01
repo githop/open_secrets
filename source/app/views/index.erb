@@ -1,9 +1,9 @@
-  <h1>Hello World!</h1>
+<h1>Hello World!</h1>
 
-  <p><a href="/sessions/destroy">log out</a></p>
+<p><a href="/sessions/destroy">log out</a></p>
 
+<% @cand_sum['response']['summary'].each do |key, val|  %> 
 
+  <p><%= key %> | <%= val %> </p>
 
-
-
-
+<% end %>

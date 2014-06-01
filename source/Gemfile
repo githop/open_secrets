@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # PostgreSQL driver
 gem 'pg'
+gem 'opensecrets'
+gem 'crack'
 
 # Sinatra driver
 gem 'sinatra'

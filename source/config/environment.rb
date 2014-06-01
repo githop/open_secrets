@@ -7,6 +7,9 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
+require 'opensecrets'
+require 'crack'
+require 'pp'
 
 require 'uri'
 require 'pathname'
