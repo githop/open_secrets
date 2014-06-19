@@ -10,6 +10,7 @@ require 'rubygems'
 require 'opensecrets'
 require 'crack'
 require 'pp'
+require 'json'
 
 require 'uri'
 require 'pathname'

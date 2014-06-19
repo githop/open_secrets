@@ -1,9 +1,12 @@
-<h1>Hello World!</h1>
+  <h1>Pockets Padded</h1>
 
-<p><a href="/sessions/destroy">log out</a></p>
+  <p><a href='/contrib'> Pelosi's Contributors Summary </a></p>
+  <p><a href='/industry'> Pelosi's Industry Contributors </a> </p>
 
-<% @cand_sum['response']['summary'].each do |key, val|  %> 
 
-  <p><%= key %> | <%= val %> </p>
+  <form method='post' action='/state/'>
+    <select name='state'>
+    <option value='OH'>OH</option>
+    <option value='KY'>KY</option>
+  </form>
 
-<% end %>

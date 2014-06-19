@@ -1,0 +1,12 @@
+<h1>Pockets Padded</h1>
+
+<p><a href="/sessions/destroy">log out</a></p>
+<h3>Top Contributors to candidate by Company</h3>
+
+<p><%= @cand_sum['cand_name'] %></p>
+
+<% @cand_sum['contributor'].each do |key|  %>
+
+<p><%= key['org_name'] %> | <%= key['total'] %> </p>
+
+<% end %>

@@ -1,0 +1,12 @@
+<h1> Industries Summary </h1>
+
+<p></p>
+
+<h3> Candidate: <%= @ind_sum['cand_name'] %> </h3>
+<% @ind_sum['industry'].each do |ind| %>
+  <ul><h3>Industry: <%= ind['industry_name'] %></h3>
+    <li>Individual: <%= ind['indivs']%></li>
+    <li>From PACs: <%= ind['pacs']%></li>
+    <li>Total: <%= ind['total']%></li>
+  </ul>
+<% end %>
