@@ -1,8 +1,20 @@
 get '/' do
   logged_in?
 
-
+  @states = Senator.all
   erb :index
+end
+
+post '/state' do 
+ @senators = Senator.where(state: params[:state])
+
+ @cand = OpenSecrets::Candidate.new()
+ @contibution = cand.contributions({cid: senator.cid})['response']['contributors']
+
+ #you need to figure out how to find or create donations for each senator. 
+ @senators.each do |senator|
+    senator.contributions  
+  end
 end
 
 get '/contrib' do

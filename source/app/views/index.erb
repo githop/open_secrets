@@ -4,9 +4,11 @@
   <p><a href='/industry'> Pelosi's Industry Contributors </a> </p>
 
 
-  <form method='post' action='/state/'>
-    <select name='state'>
-    <option value='OH'>OH</option>
-    <option value='KY'>KY</option>
+  <form method='post' action='/state'>
+  	<select name='state'>
+  	<% @states.each do |senator| %>
+    <option value='<%= senator.state %>'><%= senator.state %></option>
+    <% end %>
+    <input type='submit'>
   </form>
 
