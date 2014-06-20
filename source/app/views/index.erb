@@ -1,14 +1,15 @@
-  <h1>Pockets Padded</h1>
+  <h1>Pockets Padded <small>By Tom Hopkins</small></h1>
 
-  <p><a href='/contrib'> Pelosi's Contributors Summary </a></p>
-  <p><a href='/industry'> Pelosi's Industry Contributors </a> </p>
-
-
-  <form method='post' action='/state'>
-  	<select name='state'>
-  	<% @states.each do |senator| %>
-    <option value='<%= senator.state %>'><%= senator.state %></option>
+<img src='http://platformlondon.org/wp-content/uploads/2012/08/oil-money-congress1.jpg' class="img-responsive" />
+<form method='post' action='/state' role='form'>
+  <select class="form-control" name='state'>
+    <% @states.each_with_index do |senator, index| %>
+      <% if index.even? %>
+	<option value='<%= senator.state %>'><%= senator.state %></option>
+      <% end %>
     <% end %>
-    <input type='submit'>
+    <input type='submit' class='btn btn-default' id='submit'>
   </form>
+
+  <p>Data Brought to you by: <a href='http://www.opensecrets.org'>OpenSecrets</a> </p>
 

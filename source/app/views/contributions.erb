@@ -1,0 +1,12 @@
+<h1> Contributions  </h1>
+
+<% @senators.each do |senator| %>
+  <h3> <%= senator.first + " " + senator.last %> </h3>
+  <ol>
+    <% senator.contributions.each do |contrib| %>
+      <li> <%= contrib.org_name %>: <%= contrib.total %> </li>
+    <% end %>
+  </ol>
+<% end %>
+
+<a href='/'>Home</a>
